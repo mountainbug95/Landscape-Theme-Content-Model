@@ -1,0 +1,12 @@
+<!-- Header -->
+<header id="header">
+    <nav id="nav">
+        <ul>
+            {% for item in page.sections %}
+                {% if item.menu_item_title %}
+                    <li><a href="#{{ item.section_id }}">{{ item.menu_item_title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

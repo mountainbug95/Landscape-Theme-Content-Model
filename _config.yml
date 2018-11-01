@@ -1,0 +1,21 @@
+title: Landscape
+baseurl: /
+palette: cyan
+palettes:
+  cyan:
+    sass:
+      color: '#42aec5'
+  green:
+    sass:
+      color: '#3bbd90'
+  purple:
+    sass:
+      color: '#885db0'
+  red:
+    sass:
+      color: '#cb565a'
+sass:
+  indentWidth: 4
+  style: nested
+  precision: 10
+permalink: '/posts/:slug:output_ext'

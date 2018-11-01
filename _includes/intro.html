@@ -1,0 +1,11 @@
+<div class="inner">
+    <header>
+        <h1>{{ include.section.title | newline_to_br }}</h1>
+        {{ include.section.subtitle | markdownify }}
+    </header>
+    {% if include.section.next_section_id %}
+        <ul class="actions special">
+            <li><a href="#{{ include.section.next_section_id }}" class="button next">Proceed</a></li>
+        </ul>
+    {% endif %}
+</div>

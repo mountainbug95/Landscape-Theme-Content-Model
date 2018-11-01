@@ -1,0 +1,25 @@
+---
+label: Config
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: Site title
+    config:
+      required: true
+  - type: select
+    name: palette
+    label: Color Palette
+    description: The color palette used for the page
+    default: cyan
+    config:
+      required: true
+      source:
+        type: custom
+      options:
+        - cyan
+        - green
+        - purple
+        - red

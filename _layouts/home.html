@@ -1,0 +1,22 @@
+---
+layout: body
+---
+
+    {% include header.html %}
+    
+    <!-- Main -->
+    <div id="main">
+        <!-- Reel -->
+        <div class="reel">
+            {% for section in page.sections %}
+                <article id="{{ section.section_id }}" class="slide {{ section.style }}{% if section.with_content %} with-content{% endif %} {{ section.text_position }}">
+                    {% if section.bg_img %}
+                        <img src="{{ section.bg_img.path | relative_url }}" alt="" data-position="{{ section.bg_img.data_position }}" />
+                    {% endif %}
+
+                    {% include {{ section.component }} section=section %}
+                    
+                </article>
+            {% endfor %}
+        </div>
+    </div>

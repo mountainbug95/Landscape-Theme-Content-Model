@@ -1,0 +1,141 @@
+---
+---
+
+// Misc.
+$misc: (
+    z-index-base:		10000
+);
+
+// Duration.
+$duration: (
+    nav:				0.5s,
+    transition:			0.2s
+);
+
+// Size.
+$size: (
+    border-radius:		4px,
+    border-width:		1px,
+    element-height:		2.5em,
+    element-margin:		2em,
+    header:				3.25em,
+    gutter:				2.25em
+);
+
+// Font.
+$font: (
+
+    family:				('Open Sans', Helvetica, sans-serif),
+    weight:				400,
+    weight-bold:		700,
+
+    fixed: (
+        family:			('Courier New', monospace),
+        weight:			400,
+    ),
+
+    heading: (
+        family:			('Bitter', serif),
+        weight:			400,
+        weight-bold:	700
+    ),
+
+    button: (
+        family:			('Bitter', serif),
+        weight:			400,
+        letter-spacing:	0.25em
+    ),
+
+    special: (
+        family:			('Pacifico', cursive),
+        weight:			400
+    )
+
+);
+
+// Palette.
+{% assign palette = site.palettes[site.palette].sass %}
+$palette: (
+    bg:					#2b2b2b,
+    fg:					#ffffff,
+    fg-bold:			#ffffff,
+    fg-light:			rgba(255,255,255,0.75),
+    border:				#ffffff,
+    border-bg:			rgba(255,255,255,0.2),
+    border-bg-alt:		rgba(255,255,255,0.4),
+
+    invert: (
+        bg:				#ffffff,
+        fg:				#2b2b2b,
+        fg-bold:		#2b2b2b,
+        fg-light:		rgba(43,43,43,0.25),
+        border:			rgba(43,43,43,0.2),
+        border-bg:		rgba(43,43,43,0.05),
+        border-bg-alt:	rgba(43,43,43,0.1),
+    ),
+
+    accent: (
+        bg:				{{ palette.color }},
+        fg:				mix({{ palette.color }}, #ffffff, 25%),
+        fg-bold:		#ffffff,
+        fg-light:		mix({{ palette.color }}, #ffffff, 40%),
+        border:			#ffffff,
+        border-bg:		rgba(255,255,255,0.15),
+        border-bg-alt:	rgba(255,255,255,0.3)
+    )
+);
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic|Bitter:400,700|Pacifico');
+
+/*
+	Landscape by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+// Breakpoints.
+
+	@include breakpoints((
+		xlarge:   ( 1281px,  1680px ),
+		large:    ( 981px,   1280px ),
+		medium:   ( 737px,   980px  ),
+		small:    ( 481px,   736px  ),
+		xsmall:   ( 361px,   480px  ),
+		xxsmall:  ( null,    360px  )
+	));
+
+// Mixins.
+
+	@mixin color($p) {
+		@include color-typography($p);
+		@include color-button($p);
+		@include color-form($p);
+		@include color-list($p);
+		@include color-table($p);
+	}
+
+// Base.
+
+	@import 'base/reset';
+	@import 'base/page';
+	@import 'base/typography';
+
+// Component.
+
+	@import 'components/form';
+	@import 'components/icon';
+	@import 'components/image';
+	@import 'components/list';
+	@import 'components/actions';
+	@import 'components/icons';
+	@import 'components/table';
+	@import 'components/button';
+
+// Layout.
+
+	@import 'layout/header';
+	@import 'layout/main';
