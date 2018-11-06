@@ -1,0 +1,356 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: uploads
+public_folder: /uploads
+collections:
+  - name: config
+    label: Config
+    files:
+      - name: config
+        label: Config
+        file: _config.yml
+        fields:
+          - name: title
+            label: Title
+            widget: text
+            required: true
+          - name: palette
+            widget: select
+            required: true
+            label: Color Palette
+            default: cyan
+            hint: The color palette used for the page
+            options:
+              - cyan
+              - green
+              - purple
+              - red
+  - name: home
+    label: Home
+    files:
+      - name: home
+        label: Home
+        file: index.md
+        fields:
+          - name: title
+            widget: string
+            required: true
+            label: Page Title
+          - name: sections
+            widget: list
+            required: false
+            label: Sections
+            hint: Home sections
+            widgets:
+              - name: intro
+                widget: object
+                label: Intro Section
+                fields:
+                  - name: bg_img
+                    widget: object
+                    required: false
+                    label: Background Image
+                    fields:
+                      - name: path
+                        widget: image
+                        required: false
+                        label: Image
+                      - name: data_position
+                        widget: string
+                        required: false
+                        label: Image Data Position
+                        hint: >-
+                          How the image is displayed in the background image
+                          container (center, left, 50% 50%, etc.)
+                  - name: text_position
+                    widget: select
+                    required: true
+                    label: Text Position
+                    default: center
+                    hint: Where the text is displayed in the section
+                    options:
+                      - left
+                      - right
+                      - center
+                  - name: title
+                    widget: text
+                    required: true
+                    label: Section Title
+                    default: Landscape
+                    hint: The bold text displayed at the top of the section
+                  - name: section_id
+                    widget: string
+                    required: true
+                    label: Section ID
+                    default: intro
+                  - name: next_section_id
+                    widget: string
+                    required: false
+                    label: Next Section ID
+                    default: one
+                    hint: The ID of the next section in the page menu
+                  - name: style
+                    widget: select
+                    required: true
+                    label: Section Style
+                    default: style1
+                    hint: The text layout style
+                    options:
+                      - style1
+                      - style2
+                  - name: subtitle
+                    widget: markdown
+                    required: false
+                    label: Section Subtitle
+                    hint: The text displayed below the section title
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: intro.html
+                  - name: menu_item_title
+                    widget: string
+                    required: false
+                    label: Menu Item Title
+                    default: Intro
+                    hint: The title displayed in the menu bar
+              - name: basic_section
+                widget: object
+                label: Basic Section
+                fields:
+                  - name: bg_img
+                    widget: object
+                    required: false
+                    label: Background Image
+                    fields:
+                      - name: path
+                        widget: image
+                        required: false
+                        label: Image
+                      - name: data_position
+                        widget: string
+                        required: false
+                        label: Image Data Position
+                        hint: >-
+                          How the image is displayed in the background image
+                          container (center, left, 50% 50%, etc.)
+                  - name: text_position
+                    widget: select
+                    required: true
+                    label: Text Position
+                    default: center
+                    hint: Where the text is displayed in the section
+                    options:
+                      - left
+                      - right
+                      - center
+                  - name: title
+                    widget: text
+                    required: true
+                    label: Section Title
+                    default: Basic Title
+                    hint: The bold text displayed at the top of the section
+                  - name: section_id
+                    widget: string
+                    required: true
+                    label: Section ID
+                    default: basicID
+                  - name: next_section_id
+                    widget: string
+                    required: false
+                    label: Next Section ID
+                    default: nextID
+                    hint: The ID of the next section in the page menu
+                  - name: style
+                    widget: select
+                    required: true
+                    label: Section Style
+                    default: style2
+                    hint: The text layout style
+                    options:
+                      - style1
+                      - style2
+                  - name: content
+                    widget: markdown
+                    required: false
+                    label: Section Content
+                    hint: The text displayed as content in the section
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: basic_section.html
+                  - name: menu_item_title
+                    widget: string
+                    required: false
+                    label: Menu Item Title
+                    default: Basic Section
+                    hint: The title displayed in the menu bar
+              - name: contact
+                widget: object
+                label: Contact Section
+                fields:
+                  - name: bg_img
+                    widget: object
+                    required: false
+                    label: Background Image
+                    fields:
+                      - name: path
+                        widget: image
+                        required: false
+                        label: Image
+                      - name: data_position
+                        widget: string
+                        required: false
+                        label: Image Data Position
+                        hint: >-
+                          How the image is displayed in the background image
+                          container (center, left, 50% 50%, etc.)
+                  - name: text_position
+                    widget: select
+                    required: true
+                    label: Text Position
+                    default: center
+                    hint: Where the text is displayed in the section
+                    options:
+                      - left
+                      - right
+                      - center
+                  - name: title
+                    widget: text
+                    required: true
+                    label: Section Title
+                    default: Contact Us
+                    hint: The bold text displayed at the top of the section
+                  - name: section_id
+                    widget: string
+                    required: true
+                    label: Section ID
+                    default: contact
+                  - name: next_section_id
+                    widget: string
+                    required: false
+                    label: Next Section ID
+                    default: contact
+                    hint: The ID of the next section in the page menu
+                  - name: style
+                    widget: select
+                    required: true
+                    label: Section Style
+                    default: style2
+                    hint: The text layout style
+                    options:
+                      - style1
+                      - style2
+                  - name: with_content
+                    widget: boolean
+                    required: false
+                    label: Has Content
+                    default: false
+                    hint: Enable if the section has content
+                  - name: social_links
+                    widget: list
+                    required: false
+                    label: Social Media Icons
+                    hint: >-
+                      A list of social media displayed along the bottom of the
+                      section
+                    fields:
+                      - name: title
+                        widget: string
+                        required: true
+                        label: Icon Title
+                      - name: icon
+                        widget: string
+                        required: false
+                        label: Icon
+                        hint: Font Awesome Icon
+                      - name: link_url
+                        widget: string
+                        required: false
+                        label: URL
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: contact.html
+                  - name: menu_item_title
+                    widget: string
+                    required: false
+                    label: Menu Item Title
+                    default: Contact Us
+                    hint: The title displayed in the menu bar
+              - name: elements
+                widget: object
+                label: Elements Section
+                fields:
+                  - name: bg_img
+                    widget: object
+                    required: false
+                    label: Background Image
+                    fields:
+                      - name: path
+                        widget: image
+                        required: false
+                        label: Image
+                      - name: data_position
+                        widget: string
+                        required: false
+                        label: Image Data Position
+                        hint: >-
+                          How the image is displayed in the background image
+                          container (center, left, 50% 50%, etc.)
+                  - name: text_position
+                    widget: select
+                    required: true
+                    label: Text Position
+                    default: center
+                    hint: Where the text is displayed in the section
+                    options:
+                      - left
+                      - right
+                      - center
+                  - name: next_section_id
+                    widget: string
+                    required: false
+                    label: Next Section ID
+                    hint: The ID of the next section in the page menu
+                  - name: title
+                    widget: text
+                    required: true
+                    label: Section Title
+                    default: Elements
+                    hint: The bold text displayed at the top of the section
+                  - name: section_id
+                    widget: string
+                    required: true
+                    label: Section ID
+                    default: elements
+                  - name: style
+                    widget: select
+                    required: true
+                    label: Section Style
+                    default: style1
+                    hint: The text layout style
+                    options:
+                      - style1
+                      - style2
+                  - name: with_content
+                    widget: boolean
+                    required: false
+                    label: Has Content
+                    default: false
+                    hint: Enable if the section has content
+                  - name: component
+                    widget: hidden
+                    required: true
+                    default: elements.html
+                  - name: menu_item_title
+                    widget: string
+                    required: false
+                    label: Menu Item Title
+                    default: Elements
+                    hint: The title displayed in the menu bar
+          - name: layout
+            widget: hidden
+            required: true
+            label: Layout
+            default: home

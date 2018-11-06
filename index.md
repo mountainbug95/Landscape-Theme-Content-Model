@@ -14,7 +14,7 @@ sections:
       data_position: 30% 50%
     component: intro.html
     menu_item_title: Intro
-    template: intro
+    widget: intro
   - title: |-
       Aliquam magna faucibus
       veroeros consequat
@@ -37,7 +37,7 @@ sections:
       lobortis etiam.
     component: basic_section.html
     menu_item_title: Text Left
-    template: basic_section
+    widget: basic_section
   - title: |-
       Fusce malesuada diam
       vitae rutrum odio
@@ -60,7 +60,7 @@ sections:
       lobortis etiam.
     component: basic_section.html
     menu_item_title: Text Right
-    template: basic_section
+    widget: basic_section
   - title: |-
       Ultricies orci blandit
       sit amet pharetra
@@ -83,7 +83,7 @@ sections:
       lobortis etiam.
     component: basic_section.html
     menu_item_title: Text Center
-    template: basic_section
+    widget: basic_section
   - title: Contact Us
     section_id: contact
     next_section_id: contact
@@ -111,7 +111,7 @@ sections:
         link_url: '#'
     component: contact.html
     menu_item_title: Contact Us
-    template: contact
+    widget: contact
   - title: Elements
     section_id: elements
     style: style1
@@ -121,6 +121,6 @@ sections:
       path: images/pic04.jpg
       data_position: center
     component: elements.html
-    template: elements
+    widget: elements
 layout: home
 ---
