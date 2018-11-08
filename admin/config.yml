@@ -26,6 +26,9 @@ collections:
               - green
               - purple
               - red
+          - name: palettes
+            widget: hidden
+            required: false
   - name: home
     label: Home
     files:
