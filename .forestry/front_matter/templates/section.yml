@@ -58,6 +58,7 @@ fields:
           left, 50% 50%, etc.)
   - type: text
     name: component
+    label: Section Component
     hidden: true
     config:
       required: true

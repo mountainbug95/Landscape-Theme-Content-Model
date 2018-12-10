@@ -86,6 +86,7 @@ fields:
         label: URL
   - type: text
     name: component
+    label: Section Component
     hidden: true
     default: contact.html
     config:

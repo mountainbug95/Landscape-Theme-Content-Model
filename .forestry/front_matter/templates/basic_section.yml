@@ -70,6 +70,7 @@ fields:
         format: markdown
   - type: text
     name: component
+    label: Section Component
     hidden: true
     default: basic_section.html
     config:
