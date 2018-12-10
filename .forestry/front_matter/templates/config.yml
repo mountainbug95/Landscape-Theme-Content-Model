@@ -23,3 +23,39 @@ fields:
         - green
         - purple
         - red
+  - type: field_group
+    name: palettes
+    hidden: true
+    fields:
+      - type: field_group
+        name: cyan
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: text
+                name: color
+      - type: field_group
+        name: green
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: text
+                name: color
+      - type: field_group
+        name: purple
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: text
+                name: color
+      - type: field_group
+        name: red
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: text
+                name: color
