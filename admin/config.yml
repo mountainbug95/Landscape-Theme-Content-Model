@@ -45,11 +45,21 @@ collections:
             required: false
             label: Sections
             hint: Home sections
-            widgets:
+            types:
               - name: intro
                 widget: object
                 label: Intro Section
                 fields:
+                  - name: text_position
+                    widget: select
+                    required: true
+                    label: Text Position
+                    default: center
+                    hint: Where the text is displayed in the section
+                    options:
+                      - left
+                      - right
+                      - center
                   - name: bg_img
                     widget: object
                     required: false
@@ -66,16 +76,6 @@ collections:
                         hint: >-
                           How the image is displayed in the background image
                           container (center, left, 50% 50%, etc.)
-                  - name: text_position
-                    widget: select
-                    required: true
-                    label: Text Position
-                    default: center
-                    hint: Where the text is displayed in the section
-                    options:
-                      - left
-                      - right
-                      - center
                   - name: title
                     widget: text
                     required: true
@@ -121,6 +121,16 @@ collections:
                 widget: object
                 label: Basic Section
                 fields:
+                  - name: text_position
+                    widget: select
+                    required: true
+                    label: Text Position
+                    default: center
+                    hint: Where the text is displayed in the section
+                    options:
+                      - left
+                      - right
+                      - center
                   - name: bg_img
                     widget: object
                     required: false
@@ -137,16 +147,6 @@ collections:
                         hint: >-
                           How the image is displayed in the background image
                           container (center, left, 50% 50%, etc.)
-                  - name: text_position
-                    widget: select
-                    required: true
-                    label: Text Position
-                    default: center
-                    hint: Where the text is displayed in the section
-                    options:
-                      - left
-                      - right
-                      - center
                   - name: title
                     widget: text
                     required: true
@@ -192,6 +192,16 @@ collections:
                 widget: object
                 label: Contact Section
                 fields:
+                  - name: text_position
+                    widget: select
+                    required: true
+                    label: Text Position
+                    default: center
+                    hint: Where the text is displayed in the section
+                    options:
+                      - left
+                      - right
+                      - center
                   - name: bg_img
                     widget: object
                     required: false
@@ -208,16 +218,6 @@ collections:
                         hint: >-
                           How the image is displayed in the background image
                           container (center, left, 50% 50%, etc.)
-                  - name: text_position
-                    widget: select
-                    required: true
-                    label: Text Position
-                    default: center
-                    hint: Where the text is displayed in the section
-                    options:
-                      - left
-                      - right
-                      - center
                   - name: title
                     widget: text
                     required: true
@@ -285,6 +285,21 @@ collections:
                 widget: object
                 label: Elements Section
                 fields:
+                  - name: next_section_id
+                    widget: string
+                    required: false
+                    label: Next Section ID
+                    hint: The ID of the next section in the page menu
+                  - name: text_position
+                    widget: select
+                    required: true
+                    label: Text Position
+                    default: center
+                    hint: Where the text is displayed in the section
+                    options:
+                      - left
+                      - right
+                      - center
                   - name: bg_img
                     widget: object
                     required: false
@@ -301,21 +316,6 @@ collections:
                         hint: >-
                           How the image is displayed in the background image
                           container (center, left, 50% 50%, etc.)
-                  - name: text_position
-                    widget: select
-                    required: true
-                    label: Text Position
-                    default: center
-                    hint: Where the text is displayed in the section
-                    options:
-                      - left
-                      - right
-                      - center
-                  - name: next_section_id
-                    widget: string
-                    required: false
-                    label: Next Section ID
-                    hint: The ID of the next section in the page menu
                   - name: title
                     widget: text
                     required: true
