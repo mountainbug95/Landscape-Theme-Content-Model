@@ -1,17 +1,19 @@
 <div class="inner">
     <h2>{{ include.section.title | newline_to_br }}</h2>
-    <div class="content">
-        <form method="post" action="#">
-            <div class="fields">
-                <div class="field half"><input type="text" name="name" id="name" placeholder="Name" /></div>
-                <div class="field half"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                <div class="field"><textarea name="message" id="message" placeholder="Message" rows="5"></textarea></div>
-            </div>
-            <ul class="actions special">
-                <li><input type="submit" value="Send" /></li>
-            </ul>
-        </form>
-    </div>
+    {% if include.section.with_content %}
+        <div class="content">
+            <form method="post" action="#">
+                <div class="fields">
+                    <div class="field half"><input type="text" name="name" id="name" placeholder="Name" /></div>
+                    <div class="field half"><input type="email" name="email" id="email" placeholder="Email" /></div>
+                    <div class="field"><textarea name="message" id="message" placeholder="Message" rows="5"></textarea></div>
+                </div>
+                <ul class="actions special">
+                    <li><input type="submit" value="Send" /></li>
+                </ul>
+            </form>
+        </div>
+    {% endif %}
     <ul class="icons">
         {% for link in include.section.social_links %}
             <li><a href="{{ link.link_url }}" class="icon {{ link.icon }}"><span class="label">{{ link.title }}</span></a></li>

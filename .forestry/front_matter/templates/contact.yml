@@ -63,7 +63,7 @@ fields:
   - type: boolean
     name: with_content
     label: Has Content
-    description: Enable if the section has content
+    description: Displays the contact section form
     default: false
   - type: field_group_list
     name: social_links

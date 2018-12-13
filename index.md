@@ -115,7 +115,6 @@ sections:
   - title: Elements
     section_id: elements
     style: style1
-    with_content: true
     text_position: center
     bg_img:
       path: images/pic04.jpg

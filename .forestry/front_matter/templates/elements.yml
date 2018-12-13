@@ -59,11 +59,6 @@ fields:
       options:
         - style1
         - style2
-  - type: boolean
-    name: with_content
-    label: Has Content
-    description: Enable if the section has content
-    default: false
   - type: text
     name: component
     label: Section Component
