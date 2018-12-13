@@ -252,7 +252,7 @@ collections:
                     required: false
                     label: Has Content
                     default: false
-                    hint: Enable if the section has content
+                    hint: Displays the contact section form
                   - name: social_links
                     widget: list
                     required: false
@@ -340,12 +340,6 @@ collections:
                     options:
                       - style1
                       - style2
-                  - name: with_content
-                    widget: boolean
-                    required: false
-                    label: Has Content
-                    default: false
-                    hint: Enable if the section has content
                   - name: component
                     widget: hidden
                     required: true
