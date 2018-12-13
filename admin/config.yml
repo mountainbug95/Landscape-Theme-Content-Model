@@ -29,6 +29,7 @@ collections:
           - name: palettes
             widget: hidden
             required: false
+            label: Palettes
   - name: home
     label: Home
     files:
@@ -110,6 +111,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: intro.html
                   - name: menu_item_title
                     widget: string
@@ -181,6 +183,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: basic_section.html
                   - name: menu_item_title
                     widget: string
@@ -274,6 +277,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: contact.html
                   - name: menu_item_title
                     widget: string
@@ -345,6 +349,7 @@ collections:
                   - name: component
                     widget: hidden
                     required: true
+                    label: Section Component
                     default: elements.html
                   - name: menu_item_title
                     widget: string
